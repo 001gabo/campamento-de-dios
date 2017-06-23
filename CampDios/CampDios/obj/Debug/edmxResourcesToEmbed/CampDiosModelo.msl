@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CampDiosModelStoreContainer" CdmEntityContainer="CampDiosEntities">
+    <EntitySetMapping Name="Aprendices">
+      <EntityTypeMapping TypeName="CampDiosModel.Aprendice">
+        <MappingFragment StoreEntitySet="Aprendices">
+          <ScalarProperty Name="IdAprendis" ColumnName="IdAprendis" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Capacitaciones">
+      <EntityTypeMapping TypeName="CampDiosModel.Capacitacione">
+        <MappingFragment StoreEntitySet="Capacitaciones">
+          <ScalarProperty Name="IdCapacitacion" ColumnName="IdCapacitacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalogoes">
+      <EntityTypeMapping TypeName="CampDiosModel.Catalogo">
+        <MappingFragment StoreEntitySet="Catalogo">
+          <ScalarProperty Name="IdCatalogo" ColumnName="IdCatalogo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalogo_Detalles">
+      <EntityTypeMapping TypeName="CampDiosModel.Catalogo_Detalles">
+        <MappingFragment StoreEntitySet="Catalogo_Detalles">
+          <ScalarProperty Name="IdCatalogoDetalles" ColumnName="IdCatalogoDetalles" />
+          <ScalarProperty Name="IdCatalogo" ColumnName="IdCatalogo" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comunidads">
+      <EntityTypeMapping TypeName="CampDiosModel.Comunidad">
+        <MappingFragment StoreEntitySet="Comunidad">
+          <ScalarProperty Name="IdComunidad" ColumnName="IdComunidad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdLiderComunidad" ColumnName="IdLiderComunidad" />
+          <ScalarProperty Name="IdZona" ColumnName="IdZona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Familias">
+      <EntityTypeMapping TypeName="CampDiosModel.Familia">
+        <MappingFragment StoreEntitySet="Familia">
+          <ScalarProperty Name="IdFamilia" ColumnName="IdFamilia" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="IdParentesco" ColumnName="IdParentesco" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupoes">
+      <EntityTypeMapping TypeName="CampDiosModel.Grupo">
+        <MappingFragment StoreEntitySet="Grupo">
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdLiderGrupo" ColumnName="IdLiderGrupo" />
+          <ScalarProperty Name="IdComunidad" ColumnName="IdComunidad" />
+          <ScalarProperty Name="IdTipoGrupo" ColumnName="IdTipoGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoriaEspirituals">
+      <EntityTypeMapping TypeName="CampDiosModel.HistoriaEspiritual">
+        <MappingFragment StoreEntitySet="HistoriaEspiritual">
+          <ScalarProperty Name="IdHistoria" ColumnName="IdHistoria" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="FechaConversion" ColumnName="FechaConversion" />
+          <ScalarProperty Name="FechaBautismo" ColumnName="FechaBautismo" />
+          <ScalarProperty Name="IglesiaBautismo" ColumnName="IglesiaBautismo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Iglesias">
+      <EntityTypeMapping TypeName="CampDiosModel.Iglesia">
+        <MappingFragment StoreEntitySet="Iglesia">
+          <ScalarProperty Name="IdIglesia" ColumnName="IdIglesia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+          <ScalarProperty Name="Tel3" ColumnName="Tel3" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IdPastor" ColumnName="IdPastor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiderasgoCorporativoes">
+      <EntityTypeMapping TypeName="CampDiosModel.LiderasgoCorporativo">
+        <MappingFragment StoreEntitySet="LiderasgoCorporativo">
+          <ScalarProperty Name="IdCorporativo" ColumnName="IdCorporativo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiderasgoPastorals">
+      <EntityTypeMapping TypeName="CampDiosModel.LiderasgoPastoral">
+        <MappingFragment StoreEntitySet="LiderasgoPastoral">
+          <ScalarProperty Name="IdPastoreo" ColumnName="IdPastoreo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Miembros">
+      <EntityTypeMapping TypeName="CampDiosModel.Miembro">
+        <MappingFragment StoreEntitySet="Miembros">
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="DUI" ColumnName="DUI" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Direccion1" ColumnName="Direccion1" />
+          <ScalarProperty Name="Direccion2" ColumnName="Direccion2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Cel" ColumnName="Cel" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+          <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+          <ScalarProperty Name="IdCapacitacion" ColumnName="IdCapacitacion" />
+          <ScalarProperty Name="IdPastoreo" ColumnName="IdPastoreo" />
+          <ScalarProperty Name="IdCorporativo" ColumnName="IdCorporativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parentescos">
+      <EntityTypeMapping TypeName="CampDiosModel.Parentesco">
+        <MappingFragment StoreEntitySet="Parentescos">
+          <ScalarProperty Name="IdParentesco" ColumnName="IdParentesco" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pastores">
+      <EntityTypeMapping TypeName="CampDiosModel.Pastore">
+        <MappingFragment StoreEntitySet="Pastores">
+          <ScalarProperty Name="IdPastor" ColumnName="IdPastor" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesions">
+      <EntityTypeMapping TypeName="CampDiosModel.Profesion">
+        <MappingFragment StoreEntitySet="Profesion">
+          <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Oficio" ColumnName="Oficio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programacion_de_Reuniones">
+      <EntityTypeMapping TypeName="CampDiosModel.Programacion_de_Reunione">
+        <MappingFragment StoreEntitySet="Programacion de Reuniones">
+          <ScalarProperty Name="IdProgramacion" ColumnName="IdProgramacion" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CampDiosModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Grupo">
+      <EntityTypeMapping TypeName="CampDiosModel.Tipo_Grupo">
+        <MappingFragment StoreEntitySet="Tipo_Grupo">
+          <ScalarProperty Name="IdTipoGrupo" ColumnName="IdTipoGrupo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="CampDiosModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="UsuarioNombre" ColumnName="UsuarioNombre" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="confirmpassword" ColumnName="confirmpassword" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zonas">
+      <EntityTypeMapping TypeName="CampDiosModel.Zona">
+        <MappingFragment StoreEntitySet="Zona">
+          <ScalarProperty Name="IdZona" ColumnName="IdZona" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdLiderZona" ColumnName="IdLiderZona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comunidad_Miembro">
+      <EntityTypeMapping TypeName="CampDiosModel.Comunidad_Miembro">
+        <MappingFragment StoreEntitySet="Comunidad_Miembro">
+          <ScalarProperty Name="IdComunidad" ColumnName="IdComunidad" />
+          <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombre_Lider_Comunidad" ColumnName="Nombre Lider Comunidad" />
+          <ScalarProperty Name="Apellido_Lider_Comunidad" ColumnName="Apellido Lider Comunidad" />
+          <ScalarProperty Name="IdZona" ColumnName="IdZona" />
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupo_Miembro">
+      <EntityTypeMapping TypeName="CampDiosModel.Grupo_Miembro">
+        <MappingFragment StoreEntitySet="Grupo_Miembro">
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombre_Lider_Grupo" ColumnName="Nombre Lider Grupo" />
+          <ScalarProperty Name="Apellido_Lider_Grupo" ColumnName="Apellido Lider Grupo" />
+          <ScalarProperty Name="IdComunidad" ColumnName="IdComunidad" />
+          <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoriaEspiritualMiembros">
+      <EntityTypeMapping TypeName="CampDiosModel.HistoriaEspiritualMiembro">
+        <MappingFragment StoreEntitySet="HistoriaEspiritualMiembros">
+          <ScalarProperty Name="IdHistoria" ColumnName="IdHistoria" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="FechaConversion" ColumnName="FechaConversion" />
+          <ScalarProperty Name="FechaBautismo" ColumnName="FechaBautismo" />
+          <ScalarProperty Name="IglesiaBautismo" ColumnName="IglesiaBautismo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Miembro_Familiar">
+      <EntityTypeMapping TypeName="CampDiosModel.Miembro_Familiar">
+        <MappingFragment StoreEntitySet="Miembro_Familiar">
+          <ScalarProperty Name="IdFamilia" ColumnName="IdFamilia" />
+          <ScalarProperty Name="Nombre_del_Familiar" ColumnName="Nombre del Familiar" />
+          <ScalarProperty Name="Apellidos_del_Familiar" ColumnName="Apellidos del Familiar" />
+          <ScalarProperty Name="Parentesco" ColumnName="Parentesco" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombre_Miembro" ColumnName="Nombre Miembro" />
+          <ScalarProperty Name="Apellido_Miembro" ColumnName="Apellido Miembro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Miembros_full">
+      <EntityTypeMapping TypeName="CampDiosModel.Miembros_full">
+        <MappingFragment StoreEntitySet="Miembros_full">
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="DUI" ColumnName="DUI" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Cel" ColumnName="Cel" />
+          <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+          <ScalarProperty Name="IdProfesion" ColumnName="IdProfesion" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="IdCapacitacion" ColumnName="IdCapacitacion" />
+          <ScalarProperty Name="Capacitacion" ColumnName="Capacitacion" />
+          <ScalarProperty Name="IdPastoreo" ColumnName="IdPastoreo" />
+          <ScalarProperty Name="Liderasgo_Pastoral" ColumnName="Liderasgo Pastoral" />
+          <ScalarProperty Name="IdCorporativo" ColumnName="IdCorporativo" />
+          <ScalarProperty Name="Liderasgo_Corporativo" ColumnName="Liderasgo Corporativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zona_Miembro">
+      <EntityTypeMapping TypeName="CampDiosModel.Zona_Miembro">
+        <MappingFragment StoreEntitySet="Zona_Miembro">
+          <ScalarProperty Name="IdZona" ColumnName="IdZona" />
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+          <ScalarProperty Name="Nombre_Lider" ColumnName="Nombre Lider" />
+          <ScalarProperty Name="Apellidos_Lider" ColumnName="Apellidos Lider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="APRENDICES_SIUD" FunctionName="CampDiosModel.Store.APRENDICES_SIUD" />
+    <FunctionImportMapping FunctionImportName="CAPACITACIONES_SIUD" FunctionName="CampDiosModel.Store.CAPACITACIONES_SIUD" />
+    <FunctionImportMapping FunctionImportName="COMUNIDAD_SIUD" FunctionName="CampDiosModel.Store.COMUNIDAD_SIUD" />
+    <FunctionImportMapping FunctionImportName="FAMILIA_SIUD" FunctionName="CampDiosModel.Store.FAMILIA_SIUD" />
+    <FunctionImportMapping FunctionImportName="GRUPO_SIUD" FunctionName="CampDiosModel.Store.GRUPO_SIUD" />
+    <FunctionImportMapping FunctionImportName="HISTORIA_ESPIRITUAL_SIUD" FunctionName="CampDiosModel.Store.HISTORIA_ESPIRITUAL_SIUD" />
+    <FunctionImportMapping FunctionImportName="IGLESIA_SIUD" FunctionName="CampDiosModel.Store.IGLESIA_SIUD" />
+    <FunctionImportMapping FunctionImportName="LIDERASGO_COORPORATIVO_SIUD" FunctionName="CampDiosModel.Store.LIDERASGO_COORPORATIVO_SIUD" />
+    <FunctionImportMapping FunctionImportName="LIDERASGO_PASTORAL_SIUD" FunctionName="CampDiosModel.Store.LIDERASGO_PASTORAL_SIUD" />
+    <FunctionImportMapping FunctionImportName="MIEMBROS_SIUD" FunctionName="CampDiosModel.Store.MIEMBROS_SIUD" />
+    <FunctionImportMapping FunctionImportName="PARENTESCOS_SIUD" FunctionName="CampDiosModel.Store.PARENTESCOS_SIUD" />
+    <FunctionImportMapping FunctionImportName="PROFESION_SIUD" FunctionName="CampDiosModel.Store.PROFESION_SIUD" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="CampDiosModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="CampDiosModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="CampDiosModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="CampDiosModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CampDiosModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="CampDiosModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CampDiosModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="CampDiosModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="CampDiosModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="ZONA_SIUD" FunctionName="CampDiosModel.Store.ZONA_SIUD" />
+  </EntityContainerMapping>
+</Mapping>
