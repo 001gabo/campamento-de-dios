@@ -1,10 +1,10 @@
 ﻿@model CampDios.Modelo.Miembro
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar miembro";
 }
 
-<h2>Edit</h2>
+<h2>Edita un miembro</h2>
 
 
 @using (Html.BeginForm())
@@ -155,14 +155,16 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar cambios" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Index","Miembroes")" class="btn btn-default">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Volver al listado
+    </a>
 </div>
 
 @section Scripts {
