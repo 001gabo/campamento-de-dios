@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DACDF17C-FC5B-4BDF-A797-AF2707517E65}</ProjectGuid>
+    <ProjectGuid>{ED510EAB-9A55-4917-873A-84BAB0091606}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -169,143 +169,120 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Aprendice.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CampDiosModelo.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CampDiosModelo.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CampDiosModelo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CampDiosModelo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CampDiosModelo.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Capacitacione.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogo.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogo_Detalles.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Comunidad.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Comunidad_Miembro.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MiembroesController.cs" />
-    <Compile Include="Familia.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Grupo.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Aprendice.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Grupo_Miembro.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\CampDios.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampDios.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HistoriaEspiritual.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\CampDios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="HistoriaEspiritualMiembro.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\CampDios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampDios.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Iglesia.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Capacitacione.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="LiderasgoCorporativo.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Catalogo.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="LiderasgoPastoral.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Catalogo_Detalles.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Miembro.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Comunidad.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Miembros_full.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Familia.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Miembro_Familiar.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
+    <Compile Include="Modelo\Grupo.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\HistoriaEspiritual.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Iglesia.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LiderasgoCorporativo.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LiderasgoPastoral.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Miembro.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Parentesco.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Pastore.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Profesion.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Programacion_de_Reunione.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\sysdiagram.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tipo_Grupo.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\USUARIO.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Zona.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Parentesco.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pastore.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Profesion.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Programacion_de_Reunione.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tipo_Grupo.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="USUARIO.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Zona.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Zona_Miembro.cs">
-      <DependentUpon>CampDiosModelo.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CampDiosModelo.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CampDiosModelo.edmx</DependentUpon>
-      <LastGenOutput>CampDiosModelo.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="CampDiosModelo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CampDiosModelo.edmx</DependentUpon>
-      <LastGenOutput>CampDiosModelo.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\simple-sidebar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Modelo\CampDios.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CampDios.edmx</DependentUpon>
+      <LastGenOutput>CampDios.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\CampDios.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CampDios.edmx</DependentUpon>
+      <LastGenOutput>CampDios.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="CampDiosModelo.edmx">
+    <EntityDeploy Include="Modelo\CampDios.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CampDiosModelo.Designer.cs</LastGenOutput>
+      <LastGenOutput>CampDios.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="CampDiosModelo.edmx.diagram">
-      <DependentUpon>CampDiosModelo.edmx</DependentUpon>
+    <Content Include="Modelo\CampDios.edmx.diagram">
+      <DependentUpon>CampDios.edmx</DependentUpon>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -360,11 +337,9 @@
     <Content Include="Views\Miembroes\Details.cshtml" />
     <Content Include="Views\Miembroes\Edit.cshtml" />
     <Content Include="Views\Miembroes\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -393,9 +368,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50717</DevelopmentServerPort>
+          <DevelopmentServerPort>57949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50717/</IISUrl>
+          <IISUrl>http://localhost:57949/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
