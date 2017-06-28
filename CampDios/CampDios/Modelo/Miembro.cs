@@ -39,6 +39,7 @@ namespace CampDios.Modelo
         [Required]
         public string NIT { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         [Display(Name ="Fecha de nacimiento")]
         public System.DateTime FechaNacimiento { get; set; }
         [Required]

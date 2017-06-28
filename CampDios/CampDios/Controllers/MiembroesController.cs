@@ -20,6 +20,7 @@ namespace CampDios.Controllers
             var miembros = db.Miembros.Include(m => m.Capacitacione).Include(m => m.LiderasgoCorporativo).Include(m => m.LiderasgoPastoral).Include(m => m.Profesion);
             return View(miembros.ToList());
         }
+        
 
         // GET: Miembroes/Details/5
         public ActionResult Details(int? id)
@@ -59,6 +60,8 @@ namespace CampDios.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            //Aqui va la seleccion del sexo
+           // ViewBag.Sexo = new SelectList(db.Catalogoes,);
 
             ViewBag.IdCapacitacion = new SelectList(db.Capacitaciones, "IdCapacitacion", "Nombre", miembro.IdCapacitacion);
             ViewBag.IdCorporativo = new SelectList(db.LiderasgoCorporativoes, "IdCorporativo", "Nombre", miembro.IdCorporativo);
