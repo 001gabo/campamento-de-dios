@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CampDios.Modelo.Grupo>
+
+@{
+    ViewBag.Title = "Grupos de pacto";
+}
+
+<h2>Grupos de pacto</h2>
+
+<p>
+    @Html.ActionLink("Nuevo grupo", "Create", null, new { @class = "btn btn-primary" }) &nbsp; &nbsp;
+    <a href="@Url.Action("Index","Tipo_Grupo")" class="btn btn-success"> Nuevo tipo de grupo</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            Comunidad
+            <!--@Html.DisplayNameFor(model => model.Comunidad.Nombre)-->
+        </th>
+        <th>
+            Lider de grupo
+            <!--@Html.DisplayNameFor(model => model.Miembro.Nombres)-->
+        </th>
+        <th>
+            Tipo de grupo
+            <!--@Html.DisplayNameFor(model => model.Tipo_Grupo.Descripcion)-->
+        </th>
+        <th></th>
+        <th>Opciones</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comunidad.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Miembro.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_Grupo.Descripcion)
+        </td>
+        <td>@Html.ActionLink("Editar", "Edit", new { id = item.IdGrupo }, new { @class = "btn btn-success" })</td>
+        <td>@Html.ActionLink("Detalles", "Details", new { id = item.IdGrupo }, new { @class = "btn btn-info" })</td>
+        <td>@Html.ActionLink("Borrar", "Delete", new { id = item.IdGrupo }, new { @class = "btn btn-danger" })</td>
+
+</tr>
+}
+
+</table>

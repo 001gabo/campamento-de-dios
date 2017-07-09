@@ -1,0 +1,35 @@
+﻿@model IEnumerable<CampDios.Modelo.Tipo_Grupo>
+
+@{
+    ViewBag.Title = "Tipos de grupos";
+}
+
+<h2>Tipos de grupos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo tipo de grupo", "Create", null, new { @class = "btn btn-primary" })&nbsp;&nbsp;
+    @Html.ActionLink("Grupos de pacto", "Index","Grupoes", null, new { @class = "btn btn-success" })&nbsp;&nbsp;
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+        <th>Opciones</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>@Html.ActionLink("Editar", "Edit", new { id=item.IdTipoGrupo }, new { @class = "btn btn-success" })</td>
+        <td>@Html.ActionLink("Detalles", "Details", new { id = item.IdTipoGrupo }, new { @class = "btn btn-info" })</td>
+        <td>@Html.ActionLink("Borrar", "Delete", new { id = item.IdTipoGrupo }, new { @class = "btn btn-danger" })</td>
+
+    </tr>
+}
+
+</table>

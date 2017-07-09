@@ -11,7 +11,8 @@ namespace CampDios.Modelo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Grupo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,13 +21,24 @@ namespace CampDios.Modelo
             this.Aprendices = new HashSet<Aprendice>();
             this.Programacion_de_Reuniones = new HashSet<Programacion_de_Reunione>();
         }
-    
+        [Required]
         public int IdGrupo { get; set; }
+        [Required]
         public string Nombre { get; set; }
+        [Required]
+        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
+        [Required]
+        [Display(Name = "Dirección")]
         public string Direccion { get; set; }
+        [Required]
+        [Display(Name = "Lider de grupo")]
         public int IdLiderGrupo { get; set; }
+        [Required]
+        [Display(Name = "Comunidad")]
         public int IdComunidad { get; set; }
+        [Required]
+        [Display(Name = "Tipo de grupo")]
         public Nullable<int> IdTipoGrupo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

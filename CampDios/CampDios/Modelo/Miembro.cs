@@ -64,11 +64,16 @@ namespace CampDios.Modelo
         [Display(Name = "Estado civil")]
         public string EstadoCivil { get; set; }
         [Required]
+        [Display(Name = "Profesión")]
         public Nullable<int> IdProfesion { get; set; }
         [Required]
+        [Display(Name = "Capacitación")]
         public Nullable<int> IdCapacitacion { get; set; }
         [Required]
+        [Display(Name = "Liderazgo de pastoreo")]
         public Nullable<int> IdPastoreo { get; set; }
+
+        [Display(Name = "Liderazgo corporativo")]
         [Required]
         public Nullable<int> IdCorporativo { get; set; }
     

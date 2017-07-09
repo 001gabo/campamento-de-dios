@@ -1,0 +1,76 @@
+﻿@model CampDios.Modelo.Grupo
+
+@{
+    ViewBag.Title = "Borrar grupo";
+}
+
+<h2>Borrar grupo de pacto</h2>
+
+<h3>¿Esta seguro que desea borrar este grupo de pacto?</h3>
+<div> 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            Comunidad
+            <!--@Html.DisplayNameFor(model => model.Comunidad.Nombre)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comunidad.Nombre)
+        </dd>
+
+        <dt>
+            Lider de grupo
+            <!--@Html.DisplayNameFor(model => model.Miembro.Nombres)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Miembro.Nombres)
+        </dd>
+
+        <dt>
+            Descripción del grupo
+            <!--@Html.DisplayNameFor(model => model.Tipo_Grupo.Descripcion)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Grupo.Descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> &nbsp;&nbsp;
+            <a href="@Url.Action("Index","Grupoes")" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Volver al listado
+            </a>
+        </div>
+    }
+</div>

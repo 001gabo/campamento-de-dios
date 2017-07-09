@@ -1,0 +1,27 @@
+﻿@model CampDios.Modelo.Tipo_Grupo
+
+@{
+    ViewBag.Title = "Detalles del tipo de grupo";
+}
+
+<h2>Detalles del tipo de grupo</h2>
+
+<div> 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdTipoGrupo }, new { @class = "btn btn-success" }) &nbsp;&nbsp;
+    <a href="@Url.Action("Index","Tipo_Grupo")" class="btn btn-default">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Volver al listado
+    </a>
+</p>

@@ -171,6 +171,6 @@ C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\bin\es\Microsof
 C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\obj\Debug\CampDios.csprojResolveAssemblyReference.cache
 C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\obj\Debug\CampDios.dll
 C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\obj\Debug\CampDios.pdb
-C:\Users\galfo\Source\Repos\campamento-de-dios\CampDios\CampDios\obj\Debug\CampDios.csprojResolveAssemblyReference.cache
