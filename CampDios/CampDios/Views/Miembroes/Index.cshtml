@@ -7,7 +7,8 @@
 <h2>Miembros</h2>
 
 <p>
-    @Html.ActionLink("Nuevo miembro", "Create", null, new { @class = "btn btn-primary" })
+    <a href="@Url.Action("Create","Miembroes")" class="btn btn-primary"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i> Nuevo miembro</a>&nbsp;
+    <a href="@Url.Action("Index","HistoriaEspiritual")" class="btn btn-default"><i class="fa fa-book fa-lg" aria-hidden="true"></i> Historial espiritual</a>&nbsp;
 </p>
 <div style="overflow:auto;">
         <table class="table table-responsive">

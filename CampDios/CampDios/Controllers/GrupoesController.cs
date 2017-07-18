@@ -39,8 +39,22 @@ namespace CampDios.Controllers
         // GET: Grupoes/Create
         public ActionResult Create()
         {
+           //Linq expresión lambda
+           var queryDeLideres = db.Miembros.Where(m => m.IdPastoreo == 3).ToList();
+
+            /*
+            queryDeLideres = from m in db.Miembros
+                             where m.IdPastoreo == 1
+                             select m;*/
+
+
+            // Procedimiento almacenado
+           //var query = db.Database.SqlQuery<Miembro>("CampDios.dbo.ListadoLideres");
+            
+
+
             ViewBag.IdComunidad = new SelectList(db.Comunidads, "IdComunidad", "Nombre");
-            ViewBag.IdLiderGrupo = new SelectList(db.Miembros, "IdMiembro", "Nombres");
+            ViewBag.IdLiderGrupo = new SelectList(queryDeLideres, "IdMiembro", "Nombres");
             ViewBag.IdTipoGrupo = new SelectList(db.Tipo_Grupo, "IdTipoGrupo", "Descripcion");
             return View();
         }

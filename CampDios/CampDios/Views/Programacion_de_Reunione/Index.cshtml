@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CampDios.Modelo.Programacion_de_Reunione>
+
+@{
+    ViewBag.Title = "Horarios de reunion";
+}
+
+<h2>Horarios de reunión</h2>
+
+<p>
+    <a href="@Url.Action("Create","Programacion_de_Reunione")" class="btn btn-primary"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i> Crear nuevo horario</a>&nbsp;
+    <a href="@Url.Action("Index","Grupoes")" class="btn btn-warning"><i class="fa fa-users" aria-hidden="true"></i> Grupos de pacto</a>&nbsp;
+    <a href="@Url.Action("Index","Tipo_Grupo")" class="btn btn-success"><i class="fa fa-address-book-o fa-lg" aria-hidden="true"></i> Tipos de grupo</a>&nbsp;
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            Nombre del grupo
+            <!--@Html.DisplayNameFor(model => model.Grupo.Nombre)-->
+        </th>
+        <th></th>
+        <th>Opciones</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grupo.Nombre)
+        </td>
+        <td>@Html.ActionLink("Editar", "Edit", new { id = item.IdProgramacion }, new { @class = "btn btn-success" })</td>
+        <td>@Html.ActionLink("Detalles", "Details", new { id = item.IdProgramacion }, new { @class = "btn btn-info" })</td>
+        <td>@Html.ActionLink("Borrar", "Delete", new { id = item.IdProgramacion }, new { @class = "btn btn-danger" })</td>
+    </tr>
+}
+
+</table>

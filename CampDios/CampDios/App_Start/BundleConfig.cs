@@ -26,7 +26,8 @@ namespace CampDios
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/simple-sidebar.css"
+                      "~/Content/simple-sidebar.css",
+                      "~/css/font-awesome.min.css"
                       ));
         }
     }

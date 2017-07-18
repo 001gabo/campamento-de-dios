@@ -1,0 +1,51 @@
+﻿@model CampDios.Modelo.HistoriaEspiritual
+
+@{
+    ViewBag.Title = "Detalles de historia espiritual";
+}
+
+<h2>Detalles de historia espiritual</h2>
+
+<div> 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Miembro
+            <!--@Html.DisplayNameFor(model => model.Miembro.Nombres)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Miembro.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaConversion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaConversion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaBautismo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaBautismo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IglesiaBautismo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IglesiaBautismo)
+        </dd> 
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdHistoria }, new { @class = "btn btn-success" }) &nbsp;&nbsp; 
+    <a href="@Url.Action("Index","HistoriaEspiritual")" class="btn btn-default">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Volver al listado
+    </a>
+</p>

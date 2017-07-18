@@ -7,8 +7,9 @@
 <h2>Tipos de grupos</h2>
 
 <p>
-    @Html.ActionLink("Nuevo tipo de grupo", "Create", null, new { @class = "btn btn-primary" })&nbsp;&nbsp;
-    @Html.ActionLink("Grupos de pacto", "Index","Grupoes", null, new { @class = "btn btn-success" })&nbsp;&nbsp;
+    <a href="@Url.Action("Create","Tipo_Grupo")" class="btn btn-primary"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i> Nuevo tipo de grupo</a>&nbsp;
+    <a href="@Url.Action("Index","Grupoes")" class="btn btn-warning"><i class="fa fa-users" aria-hidden="true"></i> Grupos de pacto</a>&nbsp;
+    <a href="@Url.Action("Index","Programacion_de_Reunione")" class="btn btn-default"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i> Horarios</a>&nbsp;
 </p>
 <table class="table">
     <tr>

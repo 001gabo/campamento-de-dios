@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CampDios.Modelo.Comunidad>
+
+@{
+    ViewBag.Title = "Comunidades";
+}
+
+<h2>Comunidades</h2>
+
+<p>
+    <a href="@Url.Action("Create","Comunidads")" class="btn btn-primary"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i> Nueva comunidad</a>&nbsp;
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            Descripción
+            <!--@Html.DisplayNameFor(model => model.Descripcion)-->
+        </th>
+        <th>
+            Dirección
+            <!--@Html.DisplayNameFor(model => model.Direccion)-->
+        </th>
+        <th>
+            Lider de comunidad
+            <!--@Html.DisplayNameFor(model => model.Miembro.Nombres)-->
+        </th>
+        <th>
+            Zona
+            <!--@Html.DisplayNameFor(model => model.Zona.Nombre)-->
+        </th>
+        <th></th>
+        <th>Opciones</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Miembro.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zona.Nombre)
+        </td> 
+        <td>@Html.ActionLink("Editar", "Edit", new { id = item.IdComunidad }, new { @class = "btn btn-success" })</td>
+        <td>@Html.ActionLink("Detalles", "Details", new { id = item.IdComunidad }, new { @class = "btn btn-info" })</td>
+        <td>@Html.ActionLink("Borrar", "Delete", new { id = item.IdComunidad }, new { @class = "btn btn-danger" })</td>
+    </tr>
+}
+
+</table>

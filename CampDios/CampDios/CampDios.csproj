@@ -170,11 +170,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComunidadsController.cs" />
     <Compile Include="Controllers\GrupoesController.cs" />
+    <Compile Include="Controllers\HistoriaEspiritualController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MiembroesController.cs" />
+    <Compile Include="Controllers\Programacion_de_ReunioneController.cs" />
     <Compile Include="Controllers\Tipo_GrupoController.cs" />
+    <Compile Include="Controllers\ZonasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -250,6 +254,7 @@
     <Compile Include="Modelo\USUARIO.cs">
       <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\ViewModels\Programacion_de_ReunioneViewModel.cs" />
     <Compile Include="Modelo\Zona.cs">
       <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
@@ -263,8 +268,15 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\simple-sidebar.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\Logo ICAD.png" />
@@ -287,7 +299,25 @@
     <Content Include="Modelo\CampDios.edmx.diagram">
       <DependentUpon>CampDios.edmx</DependentUpon>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="less\animated.less" />
+    <Content Include="less\bordered-pulled.less" />
+    <Content Include="less\core.less" />
+    <Content Include="less\fixed-width.less" />
+    <Content Include="less\font-awesome.less" />
+    <Content Include="less\icons.less" />
+    <Content Include="less\larger.less" />
+    <Content Include="less\list.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\path.less" />
+    <Content Include="less\rotated-flipped.less" />
+    <Content Include="less\screen-reader.less" />
+    <Content Include="less\stacked.less" />
+    <Content Include="less\variables.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -350,14 +380,45 @@
     <Content Include="Views\Tipo_Grupo\Details.cshtml" />
     <Content Include="Views\Tipo_Grupo\Edit.cshtml" />
     <Content Include="Views\Tipo_Grupo\Index.cshtml" />
+    <Content Include="Views\Programacion_de_Reunione\Create.cshtml" />
+    <Content Include="Views\Programacion_de_Reunione\Delete.cshtml" />
+    <Content Include="Views\Programacion_de_Reunione\Details.cshtml" />
+    <Content Include="Views\Programacion_de_Reunione\Edit.cshtml" />
+    <Content Include="Views\Programacion_de_Reunione\Index.cshtml" />
+    <Content Include="scss\font-awesome.scss" />
+    <Content Include="scss\_animated.scss" />
+    <Content Include="scss\_bordered-pulled.scss" />
+    <Content Include="scss\_core.scss" />
+    <Content Include="scss\_fixed-width.scss" />
+    <Content Include="scss\_icons.scss" />
+    <Content Include="scss\_larger.scss" />
+    <Content Include="scss\_list.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_path.scss" />
+    <Content Include="scss\_rotated-flipped.scss" />
+    <Content Include="scss\_screen-reader.scss" />
+    <Content Include="scss\_stacked.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="Views\Comunidads\Create.cshtml" />
+    <Content Include="Views\Comunidads\Delete.cshtml" />
+    <Content Include="Views\Comunidads\Details.cshtml" />
+    <Content Include="Views\Comunidads\Edit.cshtml" />
+    <Content Include="Views\Comunidads\Index.cshtml" />
+    <Content Include="Views\Zonas\Create.cshtml" />
+    <Content Include="Views\Zonas\Delete.cshtml" />
+    <Content Include="Views\Zonas\Details.cshtml" />
+    <Content Include="Views\Zonas\Edit.cshtml" />
+    <Content Include="Views\Zonas\Index.cshtml" />
+    <Content Include="Views\HistoriaEspiritual\Create.cshtml" />
+    <Content Include="Views\HistoriaEspiritual\Delete.cshtml" />
+    <Content Include="Views\HistoriaEspiritual\Details.cshtml" />
+    <Content Include="Views\HistoriaEspiritual\Edit.cshtml" />
+    <Content Include="Views\HistoriaEspiritual\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

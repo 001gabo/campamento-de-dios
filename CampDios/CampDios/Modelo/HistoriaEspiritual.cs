@@ -11,13 +11,28 @@ namespace CampDios.Modelo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class HistoriaEspiritual
     {
         public int IdHistoria { get; set; }
+
+        [Required]
+        [Display(Name ="Nombre")]
         public int IdMiembro { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha de conversión")]
         public System.DateTime FechaConversion { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha de bautismo")]
         public System.DateTime FechaBautismo { get; set; }
+
+        [Required]
+        [Display(Name = "Iglesia de bautismo")]
         public string IglesiaBautismo { get; set; }
     
         public virtual Miembro Miembro { get; set; }

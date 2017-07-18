@@ -11,12 +11,19 @@ namespace CampDios.Modelo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Programacion_de_Reunione
     {
         public int IdProgramacion { get; set; }
+        [Display(Name ="Nombre del grupo")]
         public int IdGrupo { get; set; }
+        [Required]
+        [DataType(DataType.DateTime)]
+        [Display(Name = "Fecha y hora de reunión")]
         public System.DateTime Fecha { get; set; }
+        [Required]
+        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
     
         public virtual Grupo Grupo { get; set; }

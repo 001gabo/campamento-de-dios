@@ -40,6 +40,7 @@ namespace CampDios.Controllers
         // GET: Miembroes/Create
         public ActionResult Create()
         {
+             
             ViewBag.IdCapacitacion = new SelectList(db.Capacitaciones, "IdCapacitacion", "Nombre");
             ViewBag.IdCorporativo = new SelectList(db.LiderasgoCorporativoes, "IdCorporativo", "Nombre");
             ViewBag.IdPastoreo = new SelectList(db.LiderasgoPastorals, "IdPastoreo", "Nombre");

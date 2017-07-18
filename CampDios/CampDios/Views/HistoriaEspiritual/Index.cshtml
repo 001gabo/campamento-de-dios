@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CampDios.Modelo.HistoriaEspiritual>
+
+@{
+    ViewBag.Title = "Historial espiritual";
+}
+
+<h2>Historial espiritual</h2>
+
+<p>
+    <a href="@Url.Action("Create","HistoriaEspiritual")" class="btn btn-primary"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i> Nueva historia espiritual</a>&nbsp;
+    <a href="@Url.Action("Index","Miembroes")" class="btn btn-default"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Miembros</a>&nbsp;
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Miembro.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaConversion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaBautismo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IglesiaBautismo)
+        </th>
+        <th></th>
+        <th>Opciones</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr> 
+        <td>
+            @Html.DisplayFor(modelItem => item.Miembro.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaConversion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaBautismo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IglesiaBautismo)
+        </td>
+        <td>@Html.ActionLink("Editar", "Edit", new { id = item.IdHistoria }, new { @class = "btn btn-success" })</td>
+        <td>@Html.ActionLink("Detalles", "Details", new { id = item.IdHistoria }, new { @class = "btn btn-info" })</td>
+        <td>@Html.ActionLink("Borrar", "Delete", new { id = item.IdHistoria }, new { @class = "btn btn-danger" })</td>
+    </tr>
+}
+
+</table>
