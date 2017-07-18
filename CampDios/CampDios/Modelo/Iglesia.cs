@@ -14,6 +14,12 @@ namespace CampDios.Modelo
     
     public partial class Iglesia
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Iglesia()
+        {
+            this.Zonas = new HashSet<Zona>();
+        }
+    
         public int IdIglesia { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
@@ -24,5 +30,7 @@ namespace CampDios.Modelo
         public Nullable<int> IdPastor { get; set; }
     
         public virtual Pastore Pastore { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Zona> Zonas { get; set; }
     }
 }

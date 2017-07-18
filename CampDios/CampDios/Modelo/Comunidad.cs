@@ -11,8 +11,7 @@ namespace CampDios.Modelo
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Comunidad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,19 +21,10 @@ namespace CampDios.Modelo
         }
     
         public int IdComunidad { get; set; }
-        [Required]
         public string Nombre { get; set; }
-        [Required]
-        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
-        [Required]
-        [Display(Name = "Dirección")]
         public string Direccion { get; set; }
-        [Required]
-        [Display(Name = "Lider de comunidad")]
         public int IdLiderComunidad { get; set; }
-        [Required]
-        [Display(Name = "Zona")]
         public int IdZona { get; set; }
     
         public virtual Miembro Miembro { get; set; }

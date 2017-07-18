@@ -11,8 +11,7 @@ namespace CampDios.Modelo
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Zona
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,25 +21,15 @@ namespace CampDios.Modelo
         }
     
         public int IdZona { get; set; }
-
-        [Required]
-        [Display(Name ="Nombre")]
         public string Nombre { get; set; }
-
-        [Required]
-        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
-
-        [Required]
-        [Display(Name = "Dirección")]
         public string Direccion { get; set; }
-
-        [Required]
-        [Display(Name = "Lider de zona")]
         public int IdLiderZona { get; set; }
+        public Nullable<int> IdIglesia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comunidad> Comunidads { get; set; }
+        public virtual Iglesia Iglesia { get; set; }
         public virtual Miembro Miembro { get; set; }
     }
 }

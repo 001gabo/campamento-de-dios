@@ -11,8 +11,7 @@ namespace CampDios.Modelo
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Miembro
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -30,51 +29,22 @@ namespace CampDios.Modelo
         }
     
         public int IdMiembro { get; set; }
-        [Required]
         public string Nombres { get; set; }
-        [Required]
         public string Apellidos { get; set; }
-        [Required]
         public string DUI { get; set; }
-        [Required]
         public string NIT { get; set; }
-        [Required]
-        [DataType(DataType.Date)]
-        [Display(Name ="Fecha de nacimiento")]
         public System.DateTime FechaNacimiento { get; set; }
-        [Required]
-        [Display(Name = "Dirección")]
         public string Direccion { get; set; }
-        [Display(Name = "Dirección 1")]
         public string Direccion1 { get; set; }
-        [Display(Name = "Dirección 2")]
         public string Direccion2 { get; set; }
-        [Required]
-        [Display(Name = "E-mail")]
         public string Email { get; set; }
-        [Required]
-        [Display(Name = "Teléfono")]
         public string Tel { get; set; }
-        [Required]
-        [Display(Name = "Celular")]
         public string Cel { get; set; }
-        [Required]
         public string Sexo { get; set; }
-        [Required]
-        [Display(Name = "Estado civil")]
         public string EstadoCivil { get; set; }
-        [Required]
-        [Display(Name = "Profesión")]
         public Nullable<int> IdProfesion { get; set; }
-        [Required]
-        [Display(Name = "Capacitación")]
         public Nullable<int> IdCapacitacion { get; set; }
-        [Required]
-        [Display(Name = "Liderazgo de pastoreo")]
         public Nullable<int> IdPastoreo { get; set; }
-
-        [Display(Name = "Liderazgo corporativo")]
-        [Required]
         public Nullable<int> IdCorporativo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
