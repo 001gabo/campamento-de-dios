@@ -87,7 +87,7 @@
           <Property Name="IdMiembro" Type="int" Nullable="false" />
           <Property Name="FechaConversion" Type="date" Nullable="false" />
           <Property Name="FechaBautismo" Type="date" Nullable="false" />
-          <Property Name="IglesiaBautismo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="IglesiaBautismo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Iglesia">
           <Key>
@@ -372,6 +372,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_HistoriaEspiritual_Iglesia">
+          <End Role="Iglesia" Type="Self.Iglesia" Multiplicity="1" />
+          <End Role="HistoriaEspiritual" Type="Self.HistoriaEspiritual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Iglesia">
+              <PropertyRef Name="IdIglesia" />
+            </Principal>
+            <Dependent Role="HistoriaEspiritual">
+              <PropertyRef Name="IglesiaBautismo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HistoriaEspiritual_Miembros1">
           <End Role="Miembros" Type="Self.Miembros" Multiplicity="1" />
           <End Role="HistoriaEspiritual" Type="Self.HistoriaEspiritual" Multiplicity="*" />
@@ -579,6 +591,10 @@
             <End Role="Tipo_Grupo" EntitySet="Tipo_Grupo" />
             <End Role="Grupo" EntitySet="Grupo" />
           </AssociationSet>
+          <AssociationSet Name="FK_HistoriaEspiritual_Iglesia" Association="Self.FK_HistoriaEspiritual_Iglesia">
+            <End Role="Iglesia" EntitySet="Iglesia" />
+            <End Role="HistoriaEspiritual" EntitySet="HistoriaEspiritual" />
+          </AssociationSet>
           <AssociationSet Name="FK_HistoriaEspiritual_Miembros1" Association="Self.FK_HistoriaEspiritual_Miembros1">
             <End Role="Miembros" EntitySet="Miembros" />
             <End Role="HistoriaEspiritual" EntitySet="HistoriaEspiritual" />
@@ -710,6 +726,10 @@
           <AssociationSet Name="FK_Grupo_Tipo_Grupo1" Association="CampDiosModel.FK_Grupo_Tipo_Grupo1">
             <End Role="Tipo_Grupo" EntitySet="Tipo_Grupo" />
             <End Role="Grupo" EntitySet="Grupo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HistoriaEspiritual_Iglesia" Association="CampDiosModel.FK_HistoriaEspiritual_Iglesia">
+            <End Role="Iglesia" EntitySet="Iglesia" />
+            <End Role="HistoriaEspiritual" EntitySet="HistoriaEspiritual" />
           </AssociationSet>
           <AssociationSet Name="FK_HistoriaEspiritual_Miembros1" Association="CampDiosModel.FK_HistoriaEspiritual_Miembros1">
             <End Role="Miembros" EntitySet="Miembros" />
@@ -848,7 +868,8 @@
           <Property Name="IdMiembro" Type="Int32" Nullable="false" />
           <Property Name="FechaConversion" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="FechaBautismo" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="IglesiaBautismo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IglesiaBautismo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Iglesia" Relationship="CampDiosModel.FK_HistoriaEspiritual_Iglesia" FromRole="HistoriaEspiritual" ToRole="Iglesia" />
           <NavigationProperty Name="Miembros" Relationship="CampDiosModel.FK_HistoriaEspiritual_Miembros1" FromRole="HistoriaEspiritual" ToRole="Miembros" />
         </EntityType>
         <EntityType Name="Iglesia">
@@ -863,6 +884,7 @@
           <Property Name="Tel3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdMiembro" Type="Int32" />
+          <NavigationProperty Name="HistoriaEspiritual" Relationship="CampDiosModel.FK_HistoriaEspiritual_Iglesia" FromRole="Iglesia" ToRole="HistoriaEspiritual" />
           <NavigationProperty Name="Miembros" Relationship="CampDiosModel.FK_Iglesia_Miembros" FromRole="Iglesia" ToRole="Miembros" />
           <NavigationProperty Name="Zona" Relationship="CampDiosModel.FK_Zona_Iglesia1" FromRole="Iglesia" ToRole="Zona" />
         </EntityType>
@@ -1187,6 +1209,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_HistoriaEspiritual_Iglesia">
+          <End Type="CampDiosModel.Iglesia" Role="Iglesia" Multiplicity="1" />
+          <End Type="CampDiosModel.HistoriaEspiritual" Role="HistoriaEspiritual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Iglesia">
+              <PropertyRef Name="IdIglesia" />
+            </Principal>
+            <Dependent Role="HistoriaEspiritual">
+              <PropertyRef Name="IglesiaBautismo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HistoriaEspiritual_Miembros1">
           <End Type="CampDiosModel.Miembros" Role="Miembros" Multiplicity="1" />
           <End Type="CampDiosModel.HistoriaEspiritual" Role="HistoriaEspiritual" Multiplicity="*" />
@@ -1295,7 +1329,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

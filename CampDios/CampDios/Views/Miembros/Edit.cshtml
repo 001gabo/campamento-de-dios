@@ -4,7 +4,7 @@
     ViewBag.Title = "Miembros-Editar";
 }
 
-<cente><h2>Editar</h2></cente>
+<cente><h2>Miembros-Editar</h2></cente>
 
 
 @using (Html.BeginForm())
@@ -114,7 +114,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdEstadoCivil, "IdEstadoCivil", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdEstadoCivil, "Estado civil", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdEstadoCivil", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdEstadoCivil, "", new { @class = "text-danger" })
@@ -122,7 +122,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdProfesion, "IdProfesion", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdProfesion, "Profesión", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdProfesion", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdProfesion, "", new { @class = "text-danger" })
@@ -130,7 +130,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdCapacitacion, "IdCapacitacion", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdCapacitacion, "Capacitación", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdCapacitacion", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdCapacitacion, "", new { @class = "text-danger" })
@@ -138,7 +138,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdRol, "IdRol", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdRol, "Liderazgo pastoral", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdRol", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdRol, "", new { @class = "text-danger" })
@@ -146,7 +146,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdHMayor, "IdHMayor", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdHMayor, "Hermano mayor", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdHMayor", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdHMayor, "", new { @class = "text-danger" })
@@ -154,7 +154,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdCorporativo, "IdCorporativo", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdCorporativo, "Liderazgo corporativo", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdCorporativo", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdCorporativo, "", new { @class = "text-danger" })
@@ -163,14 +163,16 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar cambios" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Index","Miembros")" class="btn btn-default">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Volver al listado
+    </a>
 </div>
 
 @section Scripts {

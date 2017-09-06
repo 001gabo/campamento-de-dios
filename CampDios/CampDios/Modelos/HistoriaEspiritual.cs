@@ -18,8 +18,9 @@ namespace CampDios.Modelos
         public int IdMiembro { get; set; }
         public System.DateTime FechaConversion { get; set; }
         public System.DateTime FechaBautismo { get; set; }
-        public string IglesiaBautismo { get; set; }
+        public int IglesiaBautismo { get; set; }
     
+        public virtual Iglesia Iglesia { get; set; }
         public virtual Miembros Miembros { get; set; }
     }
 }

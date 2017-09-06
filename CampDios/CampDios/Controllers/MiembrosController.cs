@@ -17,7 +17,17 @@ namespace CampDios.Controllers
         // GET: Miembros
         public ActionResult Index()
         {
+
+            /*int now = int.Parse(DateTime.Today.ToString("ddMMyyyy")) ;
+            int dob = int.Parse(db.Miembros.Include(m=>m.FechaNacimiento).ToString());
+            string dif =(now-dob).ToString();
+            string age = "0";
+            if (dif.Length > 4)
+                age = dif.Substring(0,dif.Length-4);
+            Console.WriteLine("La edad es:"+age);*/
+
             var miembros = db.Miembros.Include(m => m.Capacitaciones).Include(m => m.EstadoCivil).Include(m => m.LiderazgoCorporativo).Include(m => m.Miembros2).Include(m => m.Profesion).Include(m => m.Roles).Include(m => m.Sexo1);
+
             return View(miembros.ToList());
         }
 

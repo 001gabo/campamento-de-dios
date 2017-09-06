@@ -1,14 +1,13 @@
 ﻿@model CampDios.Modelos.Miembros
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Miembros-Borrar";
 }
 
-<h2>Delete</h2>
+<center><h2>Miembros-Borrar</h2></center>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Miembros</h4>
+<h3>¿Desea borrar este usuario?</h3>
+<div> 
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -100,7 +99,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Capacitaciones.Nombre)
+            Capacitación
+            <!--@Html.DisplayNameFor(model => model.Capacitaciones.Nombre)-->
         </dt>
 
         <dd>
@@ -108,7 +108,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EstadoCivil.Estado)
+            Estado civil
+            <!--@Html.DisplayNameFor(model => model.EstadoCivil.Estado)-->
         </dt>
 
         <dd>
@@ -116,7 +117,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LiderazgoCorporativo.Nombre)
+            Liderazgo corporativo
+            <!--@Html.DisplayNameFor(model => model.LiderazgoCorporativo.Nombre)-->
         </dt>
 
         <dd>
@@ -124,7 +126,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Miembros2.Nombres)
+            Hermano mayor
+            <!--@Html.DisplayNameFor(model => model.Miembros2.Nombres)-->
         </dt>
 
         <dd>
@@ -132,7 +135,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Profesion.Oficio)
+            Profesión
+            <!--@Html.DisplayNameFor(model => model.Profesion.Oficio)-->
         </dt>
 
         <dd>
@@ -140,7 +144,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Roles.Rol)
+            Liderazgo pastoral
+            <!--@Html.DisplayNameFor(model => model.Roles.Rol)-->
         </dt>
 
         <dd>
@@ -148,7 +153,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Sexo1.Sexo1)
+            Sexo
+            <!--@Html.DisplayNameFor(model => model.Sexo1.Sexo1)-->
         </dt>
 
         <dd>
@@ -161,8 +167,10 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Borrar" class="btn btn-danger" /> &nbsp;&nbsp;
+            <a href="@Url.Action("Index","Miembros")" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Volver al listado
+            </a>
         </div>
     }
 </div>

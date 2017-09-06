@@ -17,6 +17,7 @@ namespace CampDios.Modelos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Iglesia()
         {
+            this.HistoriaEspiritual = new HashSet<HistoriaEspiritual>();
             this.Zona = new HashSet<Zona>();
         }
     
@@ -29,6 +30,8 @@ namespace CampDios.Modelos
         public string Email { get; set; }
         public Nullable<int> IdMiembro { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistoriaEspiritual> HistoriaEspiritual { get; set; }
         public virtual Miembros Miembros { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Zona> Zona { get; set; }

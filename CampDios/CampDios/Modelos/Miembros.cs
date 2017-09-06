@@ -11,9 +11,7 @@ namespace CampDios.Modelos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Miembros
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -31,69 +29,23 @@ namespace CampDios.Modelos
         }
     
         public int IdMiembro { get; set; }
-
-        [Required]
         public string Nombres { get; set; }
-
-        [Required]
         public string Apellidos { get; set; }
-
-        [Required]
         public string DUI { get; set; }
-
-        [Required]
         public string NIT { get; set; }
-
-        [Required]
-        [DataType(DataType.Date)]
-        [DisplayName("Fecha de nacimiento")]
         public System.DateTime FechaNacimiento { get; set; }
-
-        [Required]
-        [Display(Name="Dirección")]
         public string Direccion { get; set; }
-        
-        [Display(Name="Dirección 1")]
         public string Direccion1 { get; set; }
-        
-        [Display(Name="Dirección 2")]
         public string Direccion2 { get; set; }
-
-        [Required]
-        [Display(Name="E-mail")]
         public string Email { get; set; }
-
-        [Required]
         public string Tel { get; set; }
-
-        [Required]
         public string Cel { get; set; }
-
-        [Required]
         public int Sexo { get; set; }
-
-        [Required]
-        [Display(Name="Estado civil")]
         public int IdEstadoCivil { get; set; }
-
-        [Required]
-        [Display(Name="Profesió")]
         public Nullable<int> IdProfesion { get; set; }
-
-        [Required]
-        [Display(Name="Capacitación")]
         public Nullable<int> IdCapacitacion { get; set; }
-
-        [Required]
-        [Display(Name="Liderazgo pastoral")]
         public Nullable<int> IdRol { get; set; }
-        
-
-        [Display(Name="Hermano mayor")]
         public Nullable<int> IdHMayor { get; set; }
-
-        [Required]
-        [Display(Name="Liderazgo corporativo")]
         public Nullable<int> IdCorporativo { get; set; }
     
         public virtual Capacitaciones Capacitaciones { get; set; }
