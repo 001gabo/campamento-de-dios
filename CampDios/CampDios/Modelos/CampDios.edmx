@@ -516,6 +516,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="seleccionar_lider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="CampDiosModelStoreContainer">
           <EntitySet Name="Capacitaciones" EntityType="Self.Capacitaciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comunidad" EntityType="Self.Comunidad" Schema="dbo" store:Type="Tables" />
@@ -767,6 +768,7 @@
             <End Role="Miembros" EntitySet="Miembros" />
             <End Role="Zona" EntitySet="Zona" />
           </AssociationSet>
+          <FunctionImport Name="seleccionar_lider" ReturnType="Collection(CampDiosModel.seleccionar_lider_Result)" />
         </EntityContainer>
         <EntityType Name="Capacitaciones">
           <Key>
@@ -1329,6 +1331,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="miembros_info_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellidos" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DUI" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NIT" Nullable="true" MaxLength="17" />
+          <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" />
+          <Property Type="String" Name="Direccion" Nullable="true" />
+          <Property Type="String" Name="Direccion1" Nullable="true" />
+          <Property Type="String" Name="Direccion2" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Tel" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="Cel" Nullable="true" MaxLength="9" />
+          <Property Type="Int32" Name="Sexo" Nullable="false" />
+          <Property Type="Int32" Name="IdEstadoCivil" Nullable="false" />
+          <Property Type="Int32" Name="IdProfesion" Nullable="true" />
+          <Property Type="Int32" Name="IdCapacitacion" Nullable="true" />
+          <Property Type="Int32" Name="IdRol" Nullable="true" />
+          <Property Type="Int32" Name="IdHMayor" Nullable="true" />
+          <Property Type="Int32" Name="IdCorporativo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="seleccionar_lider_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1568,6 +1595,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_lider" FunctionName="CampDiosModel.Store.seleccionar_lider">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_lider_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

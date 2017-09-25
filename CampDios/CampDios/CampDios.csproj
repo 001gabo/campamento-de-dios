@@ -170,9 +170,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComunidadController.cs" />
+    <Compile Include="Controllers\DetalleGrupoController.cs" />
+    <Compile Include="Controllers\GrupoController.cs" />
+    <Compile Include="Controllers\HistoriaEspiritualsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IglesiasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MiembrosController.cs" />
+    <Compile Include="Controllers\ZonasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,7 +230,14 @@
     <Compile Include="Modelos\LiderazgoCorporativo.cs">
       <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\seleccionar_lider_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ViewModel\Miembros-Edad.cs" />
     <Compile Include="Modelos\Miembros.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\miembros_info_Result.cs">
       <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Parentescos.cs">
@@ -357,6 +370,36 @@
     <Content Include="Views\Miembros\Details.cshtml" />
     <Content Include="Views\Miembros\Edit.cshtml" />
     <Content Include="Views\Miembros\Index.cshtml" />
+    <Content Include="Views\Iglesias\Create.cshtml" />
+    <Content Include="Views\Iglesias\Delete.cshtml" />
+    <Content Include="Views\Iglesias\Details.cshtml" />
+    <Content Include="Views\Iglesias\Edit.cshtml" />
+    <Content Include="Views\Iglesias\Index.cshtml" />
+    <Content Include="Views\HistoriaEspirituals\Create.cshtml" />
+    <Content Include="Views\HistoriaEspirituals\Delete.cshtml" />
+    <Content Include="Views\HistoriaEspirituals\Details.cshtml" />
+    <Content Include="Views\HistoriaEspirituals\Edit.cshtml" />
+    <Content Include="Views\HistoriaEspirituals\Index.cshtml" />
+    <Content Include="Views\Zonas\Create.cshtml" />
+    <Content Include="Views\Zonas\Delete.cshtml" />
+    <Content Include="Views\Zonas\Details.cshtml" />
+    <Content Include="Views\Zonas\Edit.cshtml" />
+    <Content Include="Views\Zonas\Index.cshtml" />
+    <Content Include="Views\Comunidad\Create.cshtml" />
+    <Content Include="Views\Comunidad\Delete.cshtml" />
+    <Content Include="Views\Comunidad\Details.cshtml" />
+    <Content Include="Views\Comunidad\Edit.cshtml" />
+    <Content Include="Views\Comunidad\Index.cshtml" />
+    <Content Include="Views\Grupo\Create.cshtml" />
+    <Content Include="Views\Grupo\Delete.cshtml" />
+    <Content Include="Views\Grupo\Details.cshtml" />
+    <Content Include="Views\Grupo\Edit.cshtml" />
+    <Content Include="Views\Grupo\Index.cshtml" />
+    <Content Include="Views\DetalleGrupo\Create.cshtml" />
+    <Content Include="Views\DetalleGrupo\Delete.cshtml" />
+    <Content Include="Views\DetalleGrupo\Details.cshtml" />
+    <Content Include="Views\DetalleGrupo\Edit.cshtml" />
+    <Content Include="Views\DetalleGrupo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

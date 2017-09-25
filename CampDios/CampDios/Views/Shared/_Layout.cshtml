@@ -26,7 +26,17 @@
                     </a>
                 </li>
                 <li>
+                    @Html.ActionLink("Iglesias", "Index", "Iglesias")
+                </li>
+                <li>
                     @Html.ActionLink("Miembros", "Index", "Miembros")
+                </li>
+                <li>
+                    @Html.ActionLink("Zonas", "Index", "Zonas")
+                    <ul>
+                        <li>@Html.ActionLink("Comunidad", "Index", "Comunidad")</li>
+                        <li>@Html.ActionLink("Grupos", "Index", "Grupo")</li>
+                    </ul>
                 </li>
             </ul>
         </div>

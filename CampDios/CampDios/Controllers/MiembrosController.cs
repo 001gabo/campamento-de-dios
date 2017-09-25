@@ -17,18 +17,55 @@ namespace CampDios.Controllers
         // GET: Miembros
         public ActionResult Index()
         {
+            var result = db.Miembros
+                .Include(m => m.Capacitaciones)
+                .Include(m => m.EstadoCivil)
+                .Include(m => m.LiderazgoCorporativo)
+                .Include(m => m.Miembros2)
+                .Include(m => m.Profesion)
+                .Include(m => m.Roles)
+                .Include(m => m.Sexo1)
+                .ToList().
+                Select(a => new Miembros_Edad {
+                    IdMiembro = a.IdMiembro,
+                    Nombres = a.Nombres,
+                    Apellidos = a.Apellidos,
+                    DUI = a.DUI,
+                    NIT = a.NIT,
+                    FechaNacimiento = a.FechaNacimiento,
+                    //Aqui va la edad 
+                    Edad = ComputeAge(a.FechaNacimiento),
+                    Direccion=a.Direccion,
+                    Direccion1=a.Direccion1,
+                    Direccion2=a.Direccion2,
+                    Email=a.Email,
+                    Tel=a.Tel,
+                    Cel=a.Cel,
+                    Sexo=a.Sexo,
+                    SexoDescripcion = a.Sexo1.Sexo1,
 
-            /*int now = int.Parse(DateTime.Today.ToString("ddMMyyyy")) ;
-            int dob = int.Parse(db.Miembros.Include(m=>m.FechaNacimiento).ToString());
-            string dif =(now-dob).ToString();
-            string age = "0";
-            if (dif.Length > 4)
-                age = dif.Substring(0,dif.Length-4);
-            Console.WriteLine("La edad es:"+age);*/
+                    IdEstadoCivil=a.EstadoCivil.IdEstado,
+                    NombreEstadoC=a.EstadoCivil.Estado,
 
-            var miembros = db.Miembros.Include(m => m.Capacitaciones).Include(m => m.EstadoCivil).Include(m => m.LiderazgoCorporativo).Include(m => m.Miembros2).Include(m => m.Profesion).Include(m => m.Roles).Include(m => m.Sexo1);
+                    IdProfesion=a.Profesion.IdProfesion,
+                    NombreProfesion=a.Profesion.Oficio,
 
-            return View(miembros.ToList());
+                    IdCapacitacion=a.Capacitaciones.IdCapacitacion,
+                    NombreCapacitacion=a.Capacitaciones.Nombre,
+
+                    IdRol=a.Roles.IdRol,
+                    NombreRol=a.Roles.Rol,
+
+                    IdHMayor=a.IdHMayor,
+                    NombreHermanoM=a.Miembros2.Nombres,
+
+                    IdCorporativo=a.LiderazgoCorporativo.IdCorporativo,
+                    NombreCorporativo=a.LiderazgoCorporativo.Nombre
+
+                }).ToList();
+            //var miembros = db.Miembros.Include(m => m.Capacitaciones).Include(m => m.EstadoCivil).Include(m => m.LiderazgoCorporativo).Include(m => m.Miembros2).Include(m => m.Profesion).Include(m => m.Roles).Include(m => m.Sexo1);
+
+            return View(result);
         }
 
         // GET: Miembros/Details/5
@@ -53,7 +90,7 @@ namespace CampDios.Controllers
             ViewBag.IdEstadoCivil = new SelectList(db.EstadoCivil, "IdEstado", "Estado");
             ViewBag.IdCorporativo = new SelectList(db.LiderazgoCorporativo, "IdCorporativo", "Nombre");
             ViewBag.IdHMayor = new SelectList(db.Miembros, "IdMiembro", "Nombres");
-            ViewBag.IdProfesion = new SelectList(db.Profesion, "IdProfesion", "Oficio");
+            ViewBag.IdProfesion = new SelectList(db.Profesion, "IdProfesion", "Oficio"); 
             ViewBag.IdRol = new SelectList(db.Roles, "IdRol", "Rol");
             ViewBag.Sexo = new SelectList(db.Sexo, "IdSexo", "Sexo1");
             return View();
@@ -78,6 +115,7 @@ namespace CampDios.Controllers
             ViewBag.IdCorporativo = new SelectList(db.LiderazgoCorporativo, "IdCorporativo", "Nombre", miembros.IdCorporativo);
             ViewBag.IdHMayor = new SelectList(db.Miembros, "IdMiembro", "Nombres", miembros.IdHMayor);
             ViewBag.IdProfesion = new SelectList(db.Profesion, "IdProfesion", "Oficio", miembros.IdProfesion);
+           
             ViewBag.IdRol = new SelectList(db.Roles, "IdRol", "Rol", miembros.IdRol);
             ViewBag.Sexo = new SelectList(db.Sexo, "IdSexo", "Sexo1", miembros.Sexo);
             return View(miembros);
@@ -161,6 +199,22 @@ namespace CampDios.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        //Metodos creados por el programador
+
+        //Metodo para calcular la edad de las personas
+        private int ComputeAge(DateTime birthdate) {
+            DateTime ahora = DateTime.Today;
+            int edad = ahora.Year - birthdate.Year;
+            if (birthdate > DateTime.Today.AddYears(-edad)) {
+                edad--;
+            }
+            return edad;
+        }
+
+        private string getCapacitacionName(Capacitaciones capa) {
+            return (capa == null) ? string.Empty : capa.Nombre;
         }
     }
 }

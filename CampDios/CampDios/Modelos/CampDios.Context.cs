@@ -12,6 +12,8 @@ namespace CampDios.Modelos
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class CampDiosEntities : DbContext
     {
@@ -47,5 +49,10 @@ namespace CampDios.Modelos
         public virtual DbSet<TipoReunion> TipoReunion { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
         public virtual DbSet<Zona> Zona { get; set; }
+    
+        public virtual ObjectResult<seleccionar_lider_Result> seleccionar_lider()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_lider_Result>("seleccionar_lider");
+        }
     }
 }
