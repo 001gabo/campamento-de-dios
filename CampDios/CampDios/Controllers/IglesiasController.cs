@@ -39,7 +39,9 @@ namespace CampDios.Controllers
         // GET: Iglesias/Create
         public ActionResult Create()
         {
-            ViewBag.IdMiembro = new SelectList(db.Miembros, "IdMiembro", "Nombres");
+            var result = db.Database.SqlQuery<seleccionar_pastor_iglesia_Result>("exec seleccionar_pastor_iglesia");
+            ViewBag.IdMiembro = new SelectList(result.ToList(), "IdMiembro", "Nombres");
+            //ViewBag.IdMiembro = new SelectList(db.Miembros, "IdMiembro", "Nombres");
             return View();
         }
 
