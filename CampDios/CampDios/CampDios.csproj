@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ComunidadController.cs" />
+    <Compile Include="Controllers\DetalleFamiliasController.cs" />
     <Compile Include="Controllers\DetalleGrupoController.cs" />
     <Compile Include="Controllers\GrupoController.cs" />
     <Compile Include="Controllers\HistoriaEspiritualsController.cs" />
@@ -400,6 +401,11 @@
     <Content Include="Views\DetalleGrupo\Details.cshtml" />
     <Content Include="Views\DetalleGrupo\Edit.cshtml" />
     <Content Include="Views\DetalleGrupo\Index.cshtml" />
+    <Content Include="Views\DetalleFamilias\Create.cshtml" />
+    <Content Include="Views\DetalleFamilias\Delete.cshtml" />
+    <Content Include="Views\DetalleFamilias\Details.cshtml" />
+    <Content Include="Views\DetalleFamilias\Edit.cshtml" />
+    <Content Include="Views\DetalleFamilias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
