@@ -109,7 +109,8 @@
                         @Html.DisplayFor(modelItem => item.NIT)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                        @Convert.ToString(string.Format("{0:dd/MM/yyyy}", item.FechaNacimiento))
+                        <!--Html.DisplayFor(modelItem => item.FechaNacimiento)-->
                     </td> 
                     <td>
                         @Html.DisplayFor(modelItem=>item.Edad)

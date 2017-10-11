@@ -516,7 +516,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="seleccionar_aprendiz" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="seleccionar_lider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionar_miembro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionar_pastor_general" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionar_pastor_iglesia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionar_pastor_zona" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionar_supervisor_zona" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="CampDiosModelStoreContainer">
           <EntitySet Name="Capacitaciones" EntityType="Self.Capacitaciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comunidad" EntityType="Self.Comunidad" Schema="dbo" store:Type="Tables" />
@@ -769,6 +775,12 @@
             <End Role="Zona" EntitySet="Zona" />
           </AssociationSet>
           <FunctionImport Name="seleccionar_lider" ReturnType="Collection(CampDiosModel.seleccionar_lider_Result)" />
+          <FunctionImport Name="seleccionar_pastor_general" ReturnType="Collection(CampDiosModel.seleccionar_pastor_general_Result)" />
+          <FunctionImport Name="seleccionar_pastor_iglesia" ReturnType="Collection(CampDiosModel.seleccionar_pastor_iglesia_Result)" />
+          <FunctionImport Name="seleccionar_aprendiz" ReturnType="Collection(CampDiosModel.seleccionar_aprendiz_Result)" />
+          <FunctionImport Name="seleccionar_miembro" ReturnType="Collection(CampDiosModel.seleccionar_miembro_Result)" />
+          <FunctionImport Name="seleccionar_pastor_zona" ReturnType="Collection(CampDiosModel.seleccionar_pastor_zona_Result)" />
+          <FunctionImport Name="seleccionar_supervisor_zona" ReturnType="Collection(CampDiosModel.seleccionar_supervisor_zona_Result)" />
         </EntityContainer>
         <EntityType Name="Capacitaciones">
           <Key>
@@ -1356,6 +1368,30 @@
           <Property Type="Int32" Name="IdMiembro" Nullable="false" />
           <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
         </ComplexType>
+        <ComplexType Name="seleccionar_pastor_general_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
+        <ComplexType Name="seleccionar_pastor_iglesia_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
+        <ComplexType Name="seleccionar_aprendiz_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
+        <ComplexType Name="seleccionar_miembro_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
+        <ComplexType Name="seleccionar_pastor_zona_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
+        <ComplexType Name="seleccionar_supervisor_zona_Result">
+          <Property Type="Int32" Name="IdMiembro" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="103" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1598,6 +1634,54 @@
           <FunctionImportMapping FunctionImportName="seleccionar_lider" FunctionName="CampDiosModel.Store.seleccionar_lider">
             <ResultMapping>
               <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_lider_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_pastor_general" FunctionName="CampDiosModel.Store.seleccionar_pastor_general">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_pastor_general_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_pastor_iglesia" FunctionName="CampDiosModel.Store.seleccionar_pastor_iglesia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_pastor_iglesia_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_aprendiz" FunctionName="CampDiosModel.Store.seleccionar_aprendiz">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_aprendiz_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_miembro" FunctionName="CampDiosModel.Store.seleccionar_miembro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_miembro_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_pastor_zona" FunctionName="CampDiosModel.Store.seleccionar_pastor_zona">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_pastor_zona_Result">
+                <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionar_supervisor_zona" FunctionName="CampDiosModel.Store.seleccionar_supervisor_zona">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CampDiosModel.seleccionar_supervisor_zona_Result">
                 <ScalarProperty Name="IdMiembro" ColumnName="IdMiembro" />
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
               </ComplexTypeMapping>

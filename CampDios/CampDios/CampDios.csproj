@@ -231,7 +231,25 @@
     <Compile Include="Modelos\LiderazgoCorporativo.cs">
       <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\seleccionar_aprendiz_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\seleccionar_lider_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\seleccionar_miembro_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\seleccionar_pastor_general_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\seleccionar_pastor_iglesia_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\seleccionar_pastor_zona_Result.cs">
+      <DependentUpon>CampDios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\seleccionar_supervisor_zona_Result.cs">
       <DependentUpon>CampDios.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\ViewModel\Miembros-Edad.cs" />

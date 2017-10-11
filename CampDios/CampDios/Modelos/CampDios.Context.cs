@@ -54,5 +54,35 @@ namespace CampDios.Modelos
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_lider_Result>("seleccionar_lider");
         }
+    
+        public virtual ObjectResult<seleccionar_pastor_general_Result> seleccionar_pastor_general()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_pastor_general_Result>("seleccionar_pastor_general");
+        }
+    
+        public virtual ObjectResult<seleccionar_pastor_iglesia_Result> seleccionar_pastor_iglesia()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_pastor_iglesia_Result>("seleccionar_pastor_iglesia");
+        }
+    
+        public virtual ObjectResult<seleccionar_aprendiz_Result> seleccionar_aprendiz()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_aprendiz_Result>("seleccionar_aprendiz");
+        }
+    
+        public virtual ObjectResult<seleccionar_miembro_Result> seleccionar_miembro()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_miembro_Result>("seleccionar_miembro");
+        }
+    
+        public virtual ObjectResult<seleccionar_pastor_zona_Result> seleccionar_pastor_zona()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_pastor_zona_Result>("seleccionar_pastor_zona");
+        }
+    
+        public virtual ObjectResult<seleccionar_supervisor_zona_Result> seleccionar_supervisor_zona()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<seleccionar_supervisor_zona_Result>("seleccionar_supervisor_zona");
+        }
     }
 }
